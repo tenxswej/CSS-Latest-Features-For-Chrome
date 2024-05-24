@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Fade In On Scroll</title>
+      <meta name="description" content="" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <style>
+         * {
+            margin: 0;
+            padding: 0;
+         }
+         body {
+            background-color: #242529;
+            color: aliceblue;
+         }
+         h1 {
+            padding-top: 20px;
+            text-align: center;
+         }
+         .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-inline: 20px;
+         }
+         .card {
+            opacity: 0;
+            color: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            margin-block: 20px;
+            font-size: 1.2rem;
+            border-bottom: 1px solid gray;
+            padding-block: 40px;
+            display: flex;
+            gap: 10px;
+            animation: fade-in-scroll linear forwards;
+            animation-timeline: view();
+
+            animation-range-start: cover;
+            animation-range-end: 200px;
+            transition: transform 5s;
+         }
+
+         section:nth-child(even) {
+            display: flex;
+            flex-direction: row-reverse;
+         }
+
+         @keyframes fade-in-scroll {
+            from {
+               transform: translateY(900px);
+               opacity: 0;
+            }
+            to {
+               transform: translateY(0px);
+               opacity: 1;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <div class="indicator"></div>
+      <h1>Fade In Scroll</h1>
+      <main class="container">
+         <section class="card">
+            <img src="https://placehold.co/300x200/orange/white?text=Hi\nThere" alt="image" />
+            Assumenda quibusdam error et esse rem sit saepe excepturi. Quod nobis eum alias vero dolor minus ab rem aperiam, excepturi quos
+            necessitatibus!
+         </section>
+         <section class="card">
+            <img src="https://placehold.co/300x200/blue/white?text=How\nAre You" alt="image" />
+            Assumenda quibusdam error et esse rem sit saepe excepturi. Quod nobis eum alias vero dolor minus ab rem aperiam, excepturi quos
+            necessitatibus!
+         </section>
+         <section class="card">
+            <img src="https://placehold.co/300x200/violet/white?text=How\nAre You" alt="image" />
+            Assumenda quibusdam error et esse rem sit saepe excepturi. Quod nobis eum alias vero dolor minus ab rem aperiam, excepturi quos
+            necessitatibus!
+         </section>
+         <section class="card">
+            <img src="https://placehold.co/300x200/green/white?text=How\nAre You" alt="image" />
+            Assumenda quibusdam error et esse rem sit saepe excepturi. Quod nobis eum alias vero dolor minus ab rem aperiam, excepturi quos
+            necessitatibus!
+         </section>
+         <section class="card">
+            <img src="https://placehold.co/300x200/red/white?text=How\nAre You" alt="image" />
+            Assumenda quibusdam error et esse rem sit saepe excepturi. Quod nobis eum alias vero dolor minus ab rem aperiam, excepturi quos
+            necessitatibus!
+         </section>
+         <section class="card">
+            <img src="https://placehold.co/300x200/gold/white?text=How\nAre You" alt="image" />
+            Assumenda quibusdam error et esse rem sit saepe excepturi. Quod nobis eum alias vero dolor minus ab rem aperiam, excepturi quos
+            necessitatibus!
+         </section>
+         <section class="card">
+            <img src="https://placehold.co/300x200/pink/white?text=How\nAre You" alt="image" />
+            Assumenda quibusdam error et esse rem sit saepe excepturi. Quod nobis eum alias vero dolor minus ab rem aperiam, excepturi quos
+            necessitatibus!
+         </section>
+         <section class="card">
+            <img src="https://placehold.co/300x200/skyblue/white?text=How\nAre You" alt="image" />
+            Assumenda quibusdam error et esse rem sit saepe excepturi. Quod nobis eum alias vero dolor minus ab rem aperiam, excepturi quos
+            necessitatibus!
+         </section>
+      </main>
+   </body>
+</html>
